@@ -13,7 +13,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "C:\\Users\\moham\\Documents\\GDevelop projects\\My project3\\game.json",
+    "projectFile": "C:\\Users\\moham\\Documents\\GitHub\\Jogo1-PCS3549\\game.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -181,6 +181,15 @@
         "name": "NewObject2-1.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "neymar.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "neymar.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -213,7 +222,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.4904
+        "zoomFactor": 0.3634
       },
       "objectsGroups": [],
       "variables": [],
@@ -253,12 +262,12 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 270,
+          "height": 204,
           "layer": "Layer1",
           "locked": false,
           "name": "Neymar",
           "persistentUuid": "ed5e1a5c-c3f1-4fe4-8eee-e92cc1f7d40c",
-          "width": 153,
+          "width": 120,
           "x": 44,
           "y": 142,
           "zOrder": 2,
@@ -372,9 +381,9 @@
           "variables": [],
           "behaviors": [
             {
-              "maxSpeed": 450,
               "name": "PlatformerObject",
               "type": "PlatformBehavior::PlatformerObjectBehavior",
+              "maxSpeed": 450,
               "acceleration": 1500,
               "canGrabPlatforms": false,
               "deceleration": 1500,
@@ -401,7 +410,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewObject-1-1.png",
+                      "image": "neymar.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -417,20 +426,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 13.2701,
-                            "y": 7.10502
+                            "x": 13.1012,
+                            "y": 1.62285
                           },
                           {
-                            "x": 25.5855,
-                            "y": 7.57869
+                            "x": 38.5259,
+                            "y": 1.0819
                           },
                           {
-                            "x": 25.1118,
-                            "y": 63.4715
+                            "x": 33.6573,
+                            "y": 79.5198
                           },
                           {
-                            "x": 9.48076,
-                            "y": 63.4715
+                            "x": 19.5926,
+                            "y": 77.897
                           }
                         ]
                       ]
@@ -482,6 +491,8 @@
           "variables": [],
           "behaviors": [
             {
+              "name": "PlatformerObject",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "acceleration": 1500,
               "canGrabPlatforms": false,
               "deceleration": 1500,
@@ -492,10 +503,8 @@
               "ladderClimbingSpeed": 150,
               "maxFallingSpeed": 700,
               "maxSpeed": 250,
-              "name": "PlatformerObject",
               "roundCoordinates": true,
               "slopeMaxAngle": 60,
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "xGrabTolerance": 10,
               "yGrabOffset": 0
             }
