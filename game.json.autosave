@@ -352,6 +352,15 @@
         "name": "CartaoAmarelo.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bolaFut.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bolaFut.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -384,7 +393,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.6666
+        "zoomFactor": 0.4222
       },
       "objectsGroups": [],
       "variables": [],
@@ -401,22 +410,6 @@
           "x": 0,
           "y": 520,
           "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 378,
-          "layer": "",
-          "locked": false,
-          "name": "Parede_inicio",
-          "persistentUuid": "40d6e790-5711-4d50-99b9-a4d4b30cd4f1",
-          "width": 64,
-          "x": -65,
-          "y": 221,
-          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -581,52 +574,6 @@
               "canBeGrabbed": false,
               "platformType": "NormalPlatform",
               "yGrabOffset": 0
-            }
-          ]
-        },
-        {
-          "name": "Parede_inicio",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [
-            {
-              "name": "PathfindingObstacle",
-              "type": "PathfindingBehavior::PathfindingObstacleBehavior",
-              "cost": 2,
-              "impassable": true
-            }
-          ],
-          "animations": [
-            {
-              "name": "Parede_inicio",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Parede_inicio-1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
             }
           ]
         },
@@ -925,11 +872,16 @@
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Moving",
+              "value": "0"
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
-              "name": "NewObject",
+              "name": "Bola",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -938,7 +890,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "NewObject-1.png",
+                      "image": "bolaFut.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1304,20 +1256,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "AddForceVersPos"
-              },
-              "parameters": [
-                "Bola",
-                "Neymar.X() + 600",
-                "Neymar.Y()",
-                "400",
-                "1"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "Cache"
               },
               "parameters": [
@@ -1342,6 +1280,68 @@
           },
           "comment": "Colisões Neymar",
           "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PosX"
+              },
+              "parameters": [
+                "Neymar",
+                ">",
+                "Bola.X() - 750"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Bola",
+                "Moving",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "AddForceVersPos"
+              },
+              "parameters": [
+                "Bola",
+                "Neymar.X() + 400",
+                "Neymar.Y()",
+                "300",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Bola",
+                "Moving",
+                "+",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         },
         {
           "disabled": false,

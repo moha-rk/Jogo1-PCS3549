@@ -393,7 +393,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.572
+        "zoomFactor": 0.4222
       },
       "objectsGroups": [],
       "variables": [],
@@ -872,7 +872,12 @@
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Moving",
+              "value": "0"
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -1251,20 +1256,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "AddForceVersPos"
-              },
-              "parameters": [
-                "Bola",
-                "Neymar.X() + 600",
-                "Neymar.Y()",
-                "400",
-                "1"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "Cache"
               },
               "parameters": [
@@ -1289,6 +1280,68 @@
           },
           "comment": "Colisões Neymar",
           "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PosX"
+              },
+              "parameters": [
+                "Neymar",
+                ">",
+                "Bola.X() - 750"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Bola",
+                "Moving",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "AddForceVersPos"
+              },
+              "parameters": [
+                "Bola",
+                "Neymar.X() + 600",
+                "Neymar.Y()",
+                "300",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Bola",
+                "Moving",
+                "+",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         },
         {
           "disabled": false,
