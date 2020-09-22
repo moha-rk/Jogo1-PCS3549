@@ -13,7 +13,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "C:\\Users\\lucas\\Documents\\GitHub\\Jogo1-PCS3549\\game.json",
+    "projectFile": "C:\\Users\\moham\\Documents\\GitHub\\Jogo1-PCS3549\\game.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -402,7 +402,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.4222
+        "zoomFactor": 0.538
       },
       "objectsGroups": [],
       "variables": [],
@@ -1308,6 +1308,38 @@
           },
           "comment": "Colisões Neymar",
           "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PosY"
+              },
+              "parameters": [
+                "Neymar",
+                ">",
+                "ScreenHeight()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DebuggerTools::Pause"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         },
         {
           "disabled": false,
