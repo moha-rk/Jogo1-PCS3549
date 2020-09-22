@@ -352,6 +352,15 @@
         "name": "CartaoAmarelo.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bolaFut.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bolaFut.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -384,7 +393,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1.1226
+        "zoomFactor": 0.572
       },
       "objectsGroups": [],
       "variables": [],
@@ -408,30 +417,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 378,
-          "layer": "",
-          "locked": false,
-          "name": "Parede_inicio",
-          "persistentUuid": "40d6e790-5711-4d50-99b9-a4d4b30cd4f1",
-          "width": 64,
-          "x": -65,
-          "y": 221,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 204,
+          "height": 142,
           "layer": "Layer1",
           "locked": false,
           "name": "Neymar",
           "persistentUuid": "ed5e1a5c-c3f1-4fe4-8eee-e92cc1f7d40c",
-          "width": 120,
-          "x": 44,
-          "y": 142,
+          "width": 80,
+          "x": 24,
+          "y": 273,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -488,14 +481,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 154,
+          "height": 105,
           "layer": "Layer1",
           "locked": false,
           "name": "Cano",
           "persistentUuid": "1b9443af-29b0-4493-9218-5edd49a51cf4",
-          "width": 139,
-          "x": 745,
-          "y": 370,
+          "width": 100,
+          "x": 700,
+          "y": 416,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -504,14 +497,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 221,
+          "height": 147,
           "layer": "Layer1",
           "locked": false,
           "name": "Juiz",
           "persistentUuid": "a484a1ff-ab86-488f-8110-de0ba0f87bb6",
-          "width": 112,
-          "x": 758,
-          "y": 383,
+          "width": 75,
+          "x": 711,
+          "y": 416,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -581,52 +574,6 @@
               "canBeGrabbed": false,
               "platformType": "NormalPlatform",
               "yGrabOffset": 0
-            }
-          ]
-        },
-        {
-          "name": "Parede_inicio",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [
-            {
-              "name": "PathfindingObstacle",
-              "type": "PathfindingBehavior::PathfindingObstacleBehavior",
-              "cost": 2,
-              "impassable": true
-            }
-          ],
-          "animations": [
-            {
-              "name": "Parede_inicio",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Parede_inicio-1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
             }
           ]
         },
@@ -929,7 +876,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "NewObject",
+              "name": "Bola",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -938,7 +885,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "NewObject-1.png",
+                      "image": "bolaFut.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1515,7 +1462,7 @@
               "parameters": [
                 "Juiz",
                 ">=",
-                "383"
+                "Cano.Y()-1"
               ],
               "subInstructions": []
             }
@@ -1560,7 +1507,7 @@
               "parameters": [
                 "Juiz",
                 ">=",
-                "383"
+                "Cano.Y() - 1"
               ],
               "subInstructions": []
             },
@@ -1573,7 +1520,7 @@
                 "Juiz",
                 "Cont",
                 ">=",
-                "80"
+                "65"
               ],
               "subInstructions": []
             }
@@ -1621,7 +1568,7 @@
               "parameters": [
                 "Juiz",
                 "<=",
-                "152"
+                "Cano.Y() - Juiz.Height() + 2"
               ],
               "subInstructions": []
             }
@@ -1666,7 +1613,7 @@
               "parameters": [
                 "Juiz",
                 "<=",
-                "152"
+                "Cano.Y() - Juiz.Height() + 2"
               ],
               "subInstructions": []
             },
