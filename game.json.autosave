@@ -13,7 +13,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "C:\\Users\\moham\\Documents\\GitHub\\Jogo1-PCS3549\\game.json",
+    "projectFile": "C:\\Users\\lucas\\Documents\\GitHub\\Jogo1-PCS3549\\game.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -361,6 +361,15 @@
         "name": "bolaFut.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "felipe_melo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "felipe_melo.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -449,14 +458,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 18,
+          "height": 114,
           "layer": "Layer1",
           "locked": false,
           "name": "Carrinho",
           "persistentUuid": "40e3b570-5767-4f2c-9248-b18f19184bc3",
-          "width": 100,
-          "x": 900,
-          "y": 451,
+          "width": 150,
+          "x": 852,
+          "y": 420,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -929,7 +938,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewObject2-1.png",
+                      "image": "felipe_melo.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -945,25 +954,44 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 8
+                            "x": 70,
+                            "y": 47.6
                           },
                           {
-                            "x": 64,
-                            "y": -8
+                            "x": 3.60004,
+                            "y": 46.8
                           },
                           {
-                            "x": 64,
-                            "y": 16
+                            "x": -0.399963,
+                            "y": 28.4
                           },
                           {
-                            "x": 0,
-                            "y": 9
+                            "x": 48.4,
+                            "y": 28.2
+                          },
+                          {
+                            "x": 54.8,
+                            "y": 4.2
+                          },
+                          {
+                            "x": 66,
+                            "y": 7.40002
                           }
                         ]
                       ]
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": []
                 }
               ]
             }
@@ -2121,10 +2149,6 @@
         }
       ],
       "behaviorsSharedData": [
-        {
-          "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
-        },
         {
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior"
