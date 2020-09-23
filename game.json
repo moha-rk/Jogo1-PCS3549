@@ -13,7 +13,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "C:\\Users\\moham\\Documents\\GitHub\\Jogo1-PCS3549\\game.json",
+    "projectFile": "C:\\Users\\Usuario\\Documents\\GitHub\\PCS\\game.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -450,7 +450,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.3822
+        "zoomFactor": 0.4768
       },
       "objectsGroups": [],
       "variables": [],
@@ -658,6 +658,102 @@
           "x": 8,
           "y": 22,
           "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 80,
+          "layer": "Layer1",
+          "locked": false,
+          "name": "Terra",
+          "persistentUuid": "028c621c-1e9f-4f1f-9b3d-273e785e156b",
+          "width": 342,
+          "x": 1596,
+          "y": 516,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 80,
+          "layer": "Layer1",
+          "locked": false,
+          "name": "Terra",
+          "persistentUuid": "c5ce1df3-5449-4f81-9638-a95ba4e2e631",
+          "width": 451,
+          "x": 2071,
+          "y": 516,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 130,
+          "layer": "Layer1",
+          "locked": false,
+          "name": "Cano",
+          "persistentUuid": "8d770558-b035-440e-89f9-5543a7d08a2e",
+          "width": 123,
+          "x": 2208,
+          "y": 386,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 223,
+          "layer": "Layer1",
+          "locked": false,
+          "name": "Juiz",
+          "persistentUuid": "0058ba53-5479-40d9-9a9b-5de0069c460f",
+          "width": 112,
+          "x": 2212,
+          "y": 395,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 80,
+          "layer": "Layer1",
+          "locked": false,
+          "name": "Terra",
+          "persistentUuid": "cd319f7a-86ac-45c1-88d8-7a1e594e08da",
+          "width": 583,
+          "x": 3049,
+          "y": 511,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 36,
+          "layer": "Layer1",
+          "locked": false,
+          "name": "Bola",
+          "persistentUuid": "10d93566-42f3-40f8-99a1-2529a9e00afe",
+          "width": 36,
+          "x": 2855,
+          "y": 327,
+          "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1112,69 +1208,6 @@
           ]
         },
         {
-          "name": "Juiz",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "Cont",
-              "value": "0"
-            }
-          ],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "juiz.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 126.74,
-                            "y": 4.53149
-                          },
-                          {
-                            "x": 158.461,
-                            "y": 28.6995
-                          },
-                          {
-                            "x": 185.65,
-                            "y": 371.582
-                          },
-                          {
-                            "x": 10.4319,
-                            "y": 373.093
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "CarrinhoFM",
           "tags": "",
           "type": "Sprite",
@@ -1235,6 +1268,69 @@
                           {
                             "x": 66,
                             "y": 7.40002
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Juiz",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Cont",
+              "value": "0"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "juiz.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 126.74,
+                            "y": 4.53149
+                          },
+                          {
+                            "x": 158.461,
+                            "y": 28.6995
+                          },
+                          {
+                            "x": 185.65,
+                            "y": 371.582
+                          },
+                          {
+                            "x": 10.4319,
+                            "y": 373.093
                           }
                         ]
                       ]
@@ -2904,24 +3000,24 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ModVarGlobal"
-              },
-              "parameters": [
-                "Running",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "PlatformBehavior::IgnoreDefaultControls"
               },
               "parameters": [
                 "Neymar",
                 "PlatformerObject",
                 "yes"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "Running",
+                "=",
+                "0"
               ],
               "subInstructions": []
             }
