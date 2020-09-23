@@ -419,7 +419,12 @@
   },
   "objects": [],
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "Running",
+      "value": "1"
+    }
+  ],
   "layouts": [
     {
       "b": 209,
@@ -445,7 +450,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.7096
+        "zoomFactor": 0.3822
       },
       "objectsGroups": [],
       "variables": [],
@@ -974,7 +979,7 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "neymarCaido.png",
                       "points": [],
                       "originPoint": {
@@ -988,7 +993,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1.67851,
+                            "y": 18.8937
+                          },
+                          {
+                            "x": 78.873,
+                            "y": 15.115
+                          },
+                          {
+                            "x": 79.9526,
+                            "y": 35.6282
+                          },
+                          {
+                            "x": 0.059043,
+                            "y": 31.8495
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -1463,7 +1487,20 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "Running",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -2821,16 +2858,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "DebuggerTools::Pause"
-              },
-              "parameters": [
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "Montre"
               },
               "parameters": [
@@ -2853,23 +2880,93 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MettreY"
+                "value": "Montre"
               },
               "parameters": [
-                "Neymar",
-                "=",
-                "460"
+                "CartaoVermelho",
+                ""
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "Montre"
+                "value": "AddForceXY"
               },
               "parameters": [
-                "CartaoVermelho",
-                ""
+                "Neymar",
+                "0",
+                "20",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "Running",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlatformBehavior::IgnoreDefaultControls"
+              },
+              "parameters": [
+                "Neymar",
+                "PlatformerObject",
+                "yes"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "CartaoAmarelo",
+                "Numero",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "Running",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Arreter"
+              },
+              "parameters": [
+                "Neymar"
               ],
               "subInstructions": []
             }
