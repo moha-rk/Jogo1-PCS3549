@@ -13,7 +13,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "C:\\Users\\moham\\Documents\\GitHub\\Jogo1-PCS3549\\game.json",
+    "projectFile": "C:\\Users\\lucas\\Documents\\GitHub\\Jogo1-PCS3549\\Jogo1-PCS3549\\game.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -388,6 +388,22 @@
         "name": "lugano.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "Kenney Blocks.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Kenney Blocks.ttf",
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "neymarCaido.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "neymarCaido.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -583,6 +599,22 @@
               "value": "2"
             }
           ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 58,
+          "layer": "",
+          "locked": false,
+          "name": "Perdeu",
+          "persistentUuid": "250125dd-daf1-4e32-8828-d3a6d5456654",
+          "width": 387,
+          "x": 212,
+          "y": 172,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -874,6 +906,35 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "neymar_runL3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "NeymarCaido",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "neymarCaido.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1281,6 +1342,25 @@
               ]
             }
           ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Perdeu",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Neymar Caiu!!!",
+          "font": "Kenney Blocks.ttf",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -1409,6 +1489,16 @@
                 ""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "actions": [
@@ -1419,6 +1509,16 @@
               },
               "parameters": [
                 "CartaoAmarelo"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "Perdeu"
               ],
               "subInstructions": []
             }
@@ -2365,6 +2465,40 @@
               },
               "parameters": [
                 ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "Perdeu",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "Neymar",
+                "\"NeymarCaido\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "Neymar",
+                "=",
+                "460"
               ],
               "subInstructions": []
             }
