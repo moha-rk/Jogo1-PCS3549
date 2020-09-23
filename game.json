@@ -370,6 +370,24 @@
         "name": "felipe_melo.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "fagner.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "fagner.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "lugano.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "lugano.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -402,7 +420,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.538
+        "zoomFactor": 0.319
       },
       "objectsGroups": [],
       "variables": [],
@@ -448,8 +466,8 @@
           "name": "Terra",
           "persistentUuid": "60e3630c-113f-4999-87d3-60c9c252643b",
           "width": 547,
-          "x": 1089,
-          "y": 519,
+          "x": 1026,
+          "y": 356,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -461,7 +479,7 @@
           "height": 114,
           "layer": "Layer1",
           "locked": false,
-          "name": "Carrinho",
+          "name": "CarrinhoFM",
           "persistentUuid": "40e3b570-5767-4f2c-9248-b18f19184bc3",
           "width": 150,
           "x": 852,
@@ -474,12 +492,12 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 67,
+          "height": 60,
           "layer": "Layer1",
           "locked": false,
           "name": "Bola",
           "persistentUuid": "91ace905-60f8-4426-9b3c-5c0eea6e31a2",
-          "width": 72,
+          "width": 60,
           "x": 790,
           "y": -108,
           "zOrder": 7,
@@ -921,7 +939,7 @@
           ]
         },
         {
-          "name": "Carrinho",
+          "name": "CarrinhoFM",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -981,17 +999,6 @@
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": []
                 }
               ]
             }
@@ -1150,6 +1157,130 @@
               ]
             }
           ]
+        },
+        {
+          "name": "CarrinhoFag",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "fagner.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 45.6658,
+                            "y": 33.9707
+                          },
+                          {
+                            "x": 59.2541,
+                            "y": 7.9265
+                          },
+                          {
+                            "x": 78.8719,
+                            "y": 46.9638
+                          },
+                          {
+                            "x": 1.67849,
+                            "y": 48.0435
+                          },
+                          {
+                            "x": 0.371555,
+                            "y": 30.0075
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CarrinhoLug",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "lugano.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 49.7428,
+                            "y": 31.2715
+                          },
+                          {
+                            "x": 56.9199,
+                            "y": 6.66442
+                          },
+                          {
+                            "x": 79.4764,
+                            "y": 45.113
+                          },
+                          {
+                            "x": 0.528668,
+                            "y": 47.6762
+                          },
+                          {
+                            "x": 1.04132,
+                            "y": 30.2462
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -1189,7 +1320,7 @@
               "parameters": [
                 "Neymar",
                 "<",
-                "CameraX(\"Layer1\", 0) - 400"
+                "CameraX(\"Layer1\", 0) - 420"
               ],
               "subInstructions": []
             }
@@ -1203,7 +1334,7 @@
               "parameters": [
                 "Neymar",
                 "=",
-                "CameraX(\"Layer1\", 0) - 400"
+                "CameraX(\"Layer1\", 0) - 420"
               ],
               "subInstructions": []
             }
@@ -1222,7 +1353,7 @@
                 "value": "MettreX"
               },
               "parameters": [
-                "Carrinho",
+                "CarrinhoFM",
                 "-",
                 "2"
               ],
@@ -1242,7 +1373,7 @@
                 "value": "PosX"
               },
               "parameters": [
-                "Carrinho",
+                "CarrinhoFM",
                 "<",
                 "CameraX(\"Layer1\", 0) - 800"
               ],
@@ -1256,7 +1387,7 @@
                 "value": "Delete"
               },
               "parameters": [
-                "Carrinho",
+                "CarrinhoFM",
                 ""
               ],
               "subInstructions": []
@@ -1463,7 +1594,7 @@
               },
               "parameters": [
                 "Neymar",
-                "Carrinho",
+                "CarrinhoFM",
                 "",
                 "",
                 ""
@@ -1491,7 +1622,103 @@
                 "value": "Delete"
               },
               "parameters": [
-                "Carrinho",
+                "CarrinhoFM",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Neymar",
+                "CarrinhoFag",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Neymar",
+                "CartoesAmarelos",
+                "+",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "CarrinhoFag",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Neymar",
+                "CarrinhoLug",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Neymar",
+                "CartoesAmarelos",
+                "+",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "CarrinhoLug",
                 ""
               ],
               "subInstructions": []
